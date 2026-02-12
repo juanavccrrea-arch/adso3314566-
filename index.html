@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADSO3314566</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&display=swap');
         body {
             background: linear-gradient(red, rgb(35, 197, 20));
             color: white;
-            font-family: sans-serif;
+            font-family: "Playwrite_New_Zealand_Basic";
+
+            display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100dvh;
@@ -33,6 +36,30 @@
                     font-size: 1.4rem;
                 }
             }
+            menu{
+                display: flex;
+                    flex-direction: column;
+                    gap: 0.6rem;
+                a:link, a:visited{
+                    background-color: #77fc0b;
+                    color:red;
+                    border-radius: 12 rem;
+                    display: flex;
+                    align-items: center;
+                text-decoration: none;
+                span {
+                    background-color: #46c22d;
+                    border-radius:50%;
+                    height:80px;
+                    width:80px;
+                    font-size:2rem ;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-style:2rem;
+                }
+                }
+            }
         }
     </style>
 </head>
@@ -44,6 +71,36 @@
     <h1> ADSO3314566</h1>
     <img src="pikachu.jpg" alt="">
     <h4>Juana Correa</h4>
+    <menu>
+        <a href="01-emmet/">
+            <span>01</span>
+            <aside>
+                <h4>Html</h4>
+                <small>Structure - Hypertext Markup Language</small>
+            </aside>
+        </a>
+                <a href="02-emmet/">
+            <span>02</span>
+            <aside>
+                <h4>Emmet</h4>
+                <small>Structure - Hypertext Markup Language</small>
+            </aside>
+        </a>
+                <a href="03-emmet/">
+            <span>03</span>
+            <aside>
+                <h4>Css</h4>
+                <small>Structure - Hypertext Markup Language</small>
+            </aside>
+        </a>
+                <a href="04-emmet/">
+            <span>04</span>
+            <aside>
+                <h4>Javascript</h4>
+                <small>Structure - Hypertext Markup Language</small>
+            </aside>
+        </a>
+    </menu>
 </main>
 
 </html>
