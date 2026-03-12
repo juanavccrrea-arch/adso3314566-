@@ -15,7 +15,7 @@
 |03  | Css         |Look & Fell - Cascading Style Sheets  |
 |04  | Javasacript |Behavior - Programing Languege        |
 
-![Pikachu](https://adso3314566-red.vercel.app/imgs/pikachu.jpg)
+![Pikachu](https://adso3314566-red.vercel.app/src/imgs/pikachu.jpg)
 
 [ADSO Files DRIVE](https://tinyurl.com/wnkk334u)
 
