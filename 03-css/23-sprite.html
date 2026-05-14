@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23-Sprite - Animaciones</title>
+    <link rel="stylesheet" href="../src/css/03-CSS.css">
+    <style>
+        
+        div#sprite {
+            background: url(img/anim-sprite.png) no-repeat;
+            background-color: transparent;
+            height: 256px;
+            margin: 1rem auto;
+            width: 256px;
+        }
+        div#sprite.sp1 { background-position: calc(-256px * 0) 0; }
+        div#sprite.sp2 { background-position: calc(-256px * 1) 0; }
+        div#sprite.sp3 { background-position: calc(-256px * 2) 0; }
+        div#sprite.sp4 { background-position: calc(-256px * 3) 0; }
+        div#sprite.sp5 { background-position: calc(-256px * 4) 0; }
+        div#sprite.sp6 { background-position: calc(-256px * 5) 0; }
+
+        div#pikachu {
+            background: url(img/pikachu.png) no-repeat;
+            background-color: transparent;
+            height: 256px;
+            margin: 1rem auto;
+            width: 256px;
+        }
+        div#pikachu.sp1 { background-position: calc(-256px * 0) 0; }
+        div#pikachu.sp2 { background-position: calc(-256px * 1) 0; }
+        div#pikachu.sp3 { background-position: calc(-256px * 2) 0; }
+        div#pikachu.sp4 { background-position: calc(-256px * 3) 0; }
+        div#pikachu.sp5 { background-position: calc(-256px * 4) 0; }
+        div#pikachu.sp6 { background-position: calc(-256px * 5) 0; }
+    </style>
+</head>
+<body>
+    <a class="btn-home" href="../03-Css/index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+            <path d="M240,208H224V136l2.34,2.34A8,8,0,0,0,237.66,127L139.31,28.68a16,16,0,0,0-22.62,0L18.34,127a8,8,0,0,0,11.32,11.31L32,136v72H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM48,120l80-80,80,80v88H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48Zm96,88H112V160h32Z"></path>
+        </svg>
+    </a>
+    <main>
+        <section>
+        <header>
+            <h1>23 Sprite - Runner</h1>
+            <h2>An image sprite is a collection of images put into a single image.</h2>
+        </header>
+        <section>
+            <div id="sprite" class="sp1"></div>
+            <h3>Runner</h3>
+        </section>  
+    </main>
+    <main>
+        <section>
+        <header>
+            <h1> Pikachu </h1>
+            <h2>An image sprite is a collection of images put into a single image.</h2>
+        </header>
+        <section>
+            <div id="pikachu" class="sp1"></div>
+            <h3>Pikachu</h3>
+        </section>  
+    </main>
+
+    <script> 
+        const sprite = document.getElementById('sprite');
+        const numSprite = 6;
+        let countSprite = 1;
+        
+        setInterval(() => {
+            sprite.className = '';
+            sprite.classList.add('sp' + countSprite);
+            if (countSprite === numSprite) {
+                countSprite = 1;
+            } else {
+                countSprite++;
+            }
+        }, 80);
+        const pikachu = document.getElementById('pikachu');
+        const numPikachu = 6;
+        let countPikachu = 1;
+        
+        setInterval(() => {
+            pikachu.className = '';
+            pikachu.classList.add('sp' + countPikachu);
+            if (countPikachu === numPikachu) {
+                countPikachu = 1;
+            } else {
+                countPikachu++;
+            }
+        }, 100); 
+    </script>
+</body>
+</html>

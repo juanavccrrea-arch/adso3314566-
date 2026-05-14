@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #28a745;
+    padding: 40px;
+}
+
+/* Definición del Sprite Sheet */
+.sprite {
+    background-image: url('img/spriteweb.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+/* Header y Navegación */
+.main-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-header {
+    width: 280px;
+    height: 180px;
+    background-position: 10px 10px; /* Logo grande superior izquierda */
+}
+
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background: #008a3b;
+    padding: 0;
+    border: 2px solid #005a26;
+}
+
+.nav-bar li {
+    flex: 1;
+}
+
+.nav-bar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 0;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.nav-bar a:hover {
+    background-color: #ffcd00;
+    color: #000;
+}
+
+/* Sección de Tarjetas (Cards) */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: #008a3b;
+    border: 5px solid #ffffff33;
+    padding: 15px;
+    width: 32%;
+    color: white;
+    text-align: center;
+}
+
+.sprite-box {
+    width: 100%;
+    height: 180px;
+    margin-top: 10px;
+    background-image: url('img/spriteweb.png');
+    border: 1px solid white;
+}
+
+/* Coordenadas para las imágenes de la derecha del sprite */
+.box-1 { background-position: -580px 0px; }      /* Burbujas superior */
+.box-2 { background-position: -580px -195px; }   /* Agua/Botella medio */
+.box-3 { background-position: -630px -670px; }   /* Pack productos inferior */
+
+/* Sección de Información inferior */
+.info-section {
+    background: white;
+    margin: 20px auto;
+    padding: 30px;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 4px solid #005a26;
+}
+
+.info-section p {
+    flex: 1;
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Icono redondo inferior */
+.icon-circle {
+    width: 100px;
+    height: 100px;
+    background-position: -375px -840px;
+    background-size: 1000px; /* Ajuste proporcional */
+}
+
+/* Lata individual */
+.can-right {
+    width: 110px;
+    height: 200px;
+    background-position: -120px -360px;
+}
+/* Footer Estilos */
+.secondary-nav {
+    margin-top: 30px;
+    background-color: #008a3b;
+    padding: 20px 0;
+    border: 3px solid #005a26;
+}
+
+.secondary-nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.secondary-nav li {
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Iconos del Footer usando el Sprite */
+.sprite-icon {
+    width: 80px; /* Ajusta según el tamaño del logo en tu imagen */
+    height: 50px;
+    background-image: url('spriteweb.jpg');
+    background-repeat: no-repeat;
+    margin: 0 auto 10px;
+    transition: transform 0.3s ease; /* Pequeña animación de movimiento */
+}
+
+.secondary-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+}
+
+/* Coordenadas para los iconos del footer (Logo Sprite Gris/Blanco) */
+/* Nota: Usamos el logo gris de tu imagen (centro) y el blanco (abajo izquierda) */
+
+.icon-inicio     { background-position: -330px -420px; }
+.icon-nosotros   { background-position: -330px -420px; }
+.icon-portafolio { background-position: -330px -420px; }
+.icon-servicios  { background-position: -330px -420px; }
+.icon-contacto   { background-position: -330px -420px; }
+
+/* EFECTO HOVER (El cambio que se ve en el video) */
+.secondary-nav li:hover .sprite-icon {
+    /* Al pasar el mouse, cambiamos el logo gris por el logo verde o blanco */
+    background-position: -10px -10px; 
+    transform: scale(1.1); /* Crece un poquito */
+}
+
+.secondary-nav li:hover a {
+    color: #ffcd00; /* El texto cambia a amarillo */
+}
