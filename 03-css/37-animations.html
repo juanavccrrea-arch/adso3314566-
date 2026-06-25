@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>37-animations</title>
+    <link rel="stylesheet" href="../src/css/03-css.css">
+    <style>
+        main section div.jungle {
+            background: url(img/jungle.png) no-repeat center;
+            border-radius: 4px;
+            margin-block: 2rem;
+            position: relative;
+            height: 471px;
+            width: 380px;
+            overflow: hidden;
+        }
+        
+        main section div.jungle img {
+            border-radius: 0;
+            border: none;
+            position: absolute;
+        }
+        
+        /* Logo de Donkey Kong */
+        main section div.jungle img.logo {
+            top: 35px;
+            left: 30px;
+            height: 72px;
+            object-fit: contain;
+            z-index: 9;
+            width: 317px;
+            animation: 2s animLogo ease-in infinite;
+        }
+        
+        /* Donkey Kong - salta y da UN SOLO giro para esquivar */
+        main section div.jungle img.dk {
+            top: 130px;
+            left: 120px;
+            width: 140px;
+            object-fit: contain;
+            z-index: 8;
+            animation: 3s animDK ease-in-out infinite;
+        }
+        
+        /* Contenedor del rinoceronte - movimiento lateral */
+        main section div.jungle div.move {
+            position: absolute;
+            top: 240px;
+            left: 0;
+            width: 100%;
+            animation: 8s moveRyno ease-in-out infinite;
+        }
+        
+        /* Rinoceronte */
+        main section div.jungle div.move img.ryno {
+            width: 100px;
+            object-fit: contain;
+            animation: 0.2s animRyno linear infinite;
+            position: relative;
+        }
+        
+        /* Animación del logo */
+        @keyframes animLogo {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+        
+        /* Animación de DK - salta y da SOLO UNA voltereta en el aire */
+        @keyframes animDK {
+            0% { 
+                top: 130px;
+                transform: rotateX(0deg) scale(1);
+            }
+            15% { 
+                top: 80px;
+                transform: rotateX(0deg) scale(0.9);
+            }
+            30% { 
+                top: 80px;
+                transform: rotateX(360deg) scale(0.9); /* Única voltereta en el aire */
+            }
+            50% { 
+                top: 160px;
+                transform: rotateX(360deg) scale(0.8);
+            }
+            65% { 
+                top: 130px;
+                transform: rotateX(360deg) scale(1);
+            }
+            80% { 
+                top: 130px;
+                transform: rotateX(0deg) scale(1); /* Vuelve a la posición normal */
+            }
+            100% { 
+                top: 130px;
+                transform: rotateX(0deg) scale(1);
+            }
+        }
+        
+        /* Movimiento del rinoceronte - ida y vuelta con salto en el centro */
+        @keyframes moveRyno {
+            /* ========== IDA (va de izquierda a derecha) ========== */
+            0% { 
+                left: -150px;
+                transform: scaleX(1);
+            }
+            10% {
+                left: 0px;
+                transform: scaleX(1);
+            }
+            25% {
+                left: 100px;
+                transform: scaleX(1);
+            }
+            40% {
+                left: 180px;
+                transform: scaleX(1);
+            }
+            /* Salta cuando pasa por DK */
+            45% { 
+                left: 200px;
+                transform: scaleX(1) translateY(-30px);
+            }
+            50% { 
+                left: 210px;
+                transform: scaleX(1) translateY(-50px);
+            }
+            55% { 
+                left: 200px;
+                transform: scaleX(1) translateY(-30px);
+            }
+            /* Sigue avanzando */
+            60% {
+                left: 220px;
+                transform: scaleX(1);
+            }
+            75% {
+                left: 300px;
+                transform: scaleX(1);
+            }
+            90% { 
+                left: 380px;
+                transform: scaleX(1);
+            }
+            /* Llega al final y se gira */
+            100% { 
+                left: 400px;
+                transform: scaleX(-1); /* Se da la vuelta */
+            }
+            
+            /* ========== VUELTA (va de derecha a izquierda) ========== */
+            110% { 
+                left: 380px;
+                transform: scaleX(-1);
+            }
+            125% {
+                left: 300px;
+                transform: scaleX(-1);
+            }
+            140% {
+                left: 220px;
+                transform: scaleX(-1);
+            }
+            /* Salta cuando pasa por DK de vuelta */
+            145% { 
+                left: 210px;
+                transform: scaleX(-1) translateY(-30px);
+            }
+            150% { 
+                left: 200px;
+                transform: scaleX(-1) translateY(-50px);
+            }
+            155% { 
+                left: 210px;
+                transform: scaleX(-1) translateY(-30px);
+            }
+            /* Sigue avanzando */
+            160% {
+                left: 180px;
+                transform: scaleX(-1);
+            }
+            175% {
+                left: 100px;
+                transform: scaleX(-1);
+            }
+            190% {
+                left: 0px;
+                transform: scaleX(-1);
+            }
+            /* Llega al final y se gira de nuevo */
+            200% { 
+                left: -150px;
+                transform: scaleX(1); /* Vuelve a la posición inicial */
+            }
+        }
+        
+        /* Rebote del rinoceronte mientras corre */
+        @keyframes animRyno {
+            0%, 100% { 
+                top: 0px;
+            }
+            50% { 
+                top: -8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../03-css/index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="black" viewBox="0 0 256 256">
+            <path d="M240,208H224V136l2.34,2.34A8,8,0,0,0,237.66,127L139.31,28.68a16,16,0,0,0-22.62,0L18.34,127a8,8,0,0,0,11.32,11.31L32,136v72H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM48,120l80-80,80,80v88H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48Zm96,88H112V160h32Z"/>
+        </svg>
+    </a>
+    <main>
+        <header>
+            <h1>37-animations</h1>
+            <h2>Lets an element gradually change from one style to another.</h2>
+        </header>
+        <section>
+            <div class="jungle">
+                <img src="img/logo-dk.png" alt="logo" class="logo">
+                <img src="img/dk.png" alt="Donkey Kong" class="dk">
+                <div class="move">
+                    <img src="img/ryno.png" alt="Ryno" class="ryno">
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

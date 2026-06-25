@@ -1,0 +1,154 @@
+<section class="galeria-container">
+
+    <h1 class="titulo">MI GALERÍA</h1>
+    <p class="subtitulo">Pokémon Collection</p>
+
+    <div class="galeria">
+
+        <div class="card">
+            <img src="img/Pikachu-color-model-publicity-cel.avif" alt="Pikachu">
+            <div class="overlay">Pikachu</div>
+        </div>
+
+        <div class="card">
+            <img src="img/bulbasur.jpg" alt="Bulbasaur">
+            <div class="overlay">Bulbasaur</div>
+        </div>
+
+        <div class="card">
+            <img src="img/e0181393-3a80-42c4-9711-c460b9ab6de5.webp" alt="Charizard">
+            <div class="overlay">Charizard</div>
+        </div>
+
+        <div class="card">
+            <img src="img/opinions-on-ashs-gengar-v0-5301wbqq0kqc1.webp" alt="Gengar">
+            <div class="overlay">Gengar</div>
+        </div>
+
+        <div class="card">
+            <img src="img/pokemaster_335637.jpg" alt="Lucario">
+            <div class="overlay">Lucario</div>
+        </div>
+
+        <div class="card">
+            <img src="img/squirtle.jpg" alt="Squirtle">
+            <div class="overlay">Squirtle</div>
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* FONDO MÁS POKÉMON (ELEGANTE) */
+body{
+    background: linear-gradient(180deg, #ef5350 0%, #ffffff 40%, #3b4cca 100%);
+    min-height:100vh;
+}
+
+/* CONTENEDOR */
+.galeria-container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:50px 0;
+}
+
+/* TÍTULO TIPO POKÉDEX */
+.titulo{
+    text-align:center;
+    font-size:55px;
+    font-weight:900;
+    color:#ffcb05;
+    text-shadow:
+        -3px 3px 0 #2a75bb,
+        0 0 10px rgba(0,0,0,0.4);
+    letter-spacing:2px;
+}
+
+/* SUBTITULO LIMPIO */
+.subtitulo{
+    text-align:center;
+    color:#333;
+    margin-bottom:40px;
+    font-size:18px;
+}
+
+/* GRID */
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+/* CARD ELEGANTE */
+.card{
+    position:relative;
+    border-radius:18px;
+    overflow:hidden;
+    background:white;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    transition:0.3s ease;
+    border:2px solid rgba(0,0,0,0.05);
+}
+
+/* HOVER SUAVE PRO */
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 30px rgba(0,0,0,0.25);
+}
+
+/* IMAGEN LIMPIA */
+.card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    display:block;
+}
+
+/* BARRA INFERIOR ESTILO POKÉDEX */
+.overlay{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    background:rgba(255,255,255,0.92);
+    color:#2a75bb;
+    text-align:center;
+    padding:10px;
+    font-weight:bold;
+    font-size:16px;
+    border-top:2px solid #ffcb05;
+}
+
+/* TABLET (2 COLUMNAS) */
+@media screen and (max-width:1024px){
+    .galeria{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .titulo{
+        font-size:40px;
+    }
+}
+
+/* CELULAR (1 COLUMNA) */
+@media screen and (max-width:600px){
+    .galeria{
+        grid-template-columns:1fr;
+    }
+
+    .titulo{
+        font-size:30px;
+    }
+}
+
+</style>
