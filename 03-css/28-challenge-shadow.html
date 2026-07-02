@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>28-challenge-shadow</title>
+    <link rel="stylesheet" href="../src/css/03-css.css">
+    <style>
+        /* Estilos adicionales para el pixel art */
+        .pixel-art-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .pixel-grid {
+            display: grid;
+            grid-template-columns: repeat(25, 20px);
+            grid-template-rows: repeat(25, 20px);
+            gap: 1px;
+            background-color: #1a1a1a;
+            border: 3px solid #fff;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        .pixel {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Colores para los píxeles */
+        .black { background-color: #000000; }
+        .yellow { background-color: #FFD700; }
+        .dark-yellow { background-color: #DAA520; }
+        .white { background-color: #FFFFFF; }
+    </style>
+</head>
+
+<body>
+    <a href="../03-css/index.html" class="btn-home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 256 256">
+            <path
+                d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z">
+            </path>
+        </svg>
+    </a>
+    <main>
+        <header>
+            <h1>28-challenge-shadow</h1>
+            <h2>Pixel Art 0.</h2>
+        </header>
+        <section>
+            <div class="pixel-art-container">
+                <div class="pixel-grid">
+                    <!-- FILA 1 -->
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+
+                    <!-- FILA 2 -->
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+
+                    <!-- FILA 3 -->
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+
+                    <!-- FILA 4 -->
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+
+                    <!-- FILA 5 -->
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+
+                    <!-- FILA 6 -->
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+
+                    <!-- FILA 7 -->
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+
+                    <!-- FILA 8 -->
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+
+                    <!-- FILA 9 -->
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+
+                    <!-- FILA 10 -->
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+
+                    <!-- FILA 11 -->
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+
+                    <!-- FILA 12 -->
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+
+                    <!-- FILA 13 -->
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+
+                    <!-- FILA 14 -->
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+
+                    <!-- FILA 15 -->
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+
+                    <!-- FILA 16 -->
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+
+                    <!-- FILA 17 -->
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+
+                    <!-- FILA 18 -->
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+
+                    <!-- FILA 19 -->
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+
+                    <!-- FILA 20 -->
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+
+                    <!-- FILA 21 -->
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+
+                    <!-- FILA 22 -->
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+
+                    <!-- FILA 23 -->
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+
+                    <!-- FILA 24 -->
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel black"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+
+                    <!-- FILA 25 -->
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                    <div class="pixel white"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

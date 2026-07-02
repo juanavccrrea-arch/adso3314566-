@@ -3,6 +3,7 @@
     <h1 class="titulo">Pokémon</h1>
     <p class="subtitulo">Pokémon Collection</p>
 
+    <!-- GALERÍA DE FOTOS DE POKÉMON (PARTE SUPERIOR) -->
     <div class="galeria">
 
         <div class="card">
@@ -37,6 +38,71 @@
 
     </div>
 
+    <!-- BLOQUES DE DESCRIPCIÓN HORIZONTALES CON FOTO -->
+    <div class="descripciones-container">
+
+        <div class="bloque-descripcion">
+            <div class="imagen-miniatura">
+                <img src="img/Pikachu-color-model-publicity-cel.avif" alt="Pikachu">
+            </div>
+            <div class="contenido-descripcion">
+                <h3 class="nombre-descripcion">Pikachu</h3>
+                <p class="texto-descripcion">Pokémon de tipo Eléctrico. Es conocido por su cola en forma de rayo y sus mejillas rojas que almacenan electricidad. Es la mascota más famosa de la franquicia Pokémon.</p>
+            </div>
+        </div>
+
+        <div class="bloque-descripcion">
+            <div class="imagen-miniatura">
+                <img src="img/bulbasur.jpg" alt="Bulbasaur">
+            </div>
+            <div class="contenido-descripcion">
+                <h3 class="nombre-descripcion">Bulbasaur</h3>
+                <p class="texto-descripcion">Pokémon de tipo Planta/Veneno. Tiene una semilla en su espalda que crece con él a medida que se fortalece. Es uno de los Pokémon iniciales de Kanto.</p>
+            </div>
+        </div>
+
+        <div class="bloque-descripcion">
+            <div class="imagen-miniatura">
+                <img src="img/e0181393-3a80-42c4-9711-c460b9ab6de5.webp" alt="Charizard">
+            </div>
+            <div class="contenido-descripcion">
+                <h3 class="nombre-descripcion">Charizard</h3>
+                <p class="texto-descripcion">Pokémon de tipo Fuego/Volador. Su aliento es tan caliente que puede derretir rocas. Es la evolución final de Charmander y uno de los más poderosos.</p>
+            </div>
+        </div>
+
+        <div class="bloque-descripcion">
+            <div class="imagen-miniatura">
+                <img src="img/opinions-on-ashs-gengar-v0-5301wbqq0kqc1.webp" alt="Gengar">
+            </div>
+            <div class="contenido-descripcion">
+                <h3 class="nombre-descripcion">Gengar</h3>
+                <p class="texto-descripcion">Pokémon de tipo Fantasma/Veneno. Le encanta esconderse en las sombras y jugar bromas pesadas a la gente. Es la evolución final de Gastly.</p>
+            </div>
+        </div>
+
+        <div class="bloque-descripcion">
+            <div class="imagen-miniatura">
+                <img src="img/pokemaster_335637.jpg" alt="Lucario">
+            </div>
+            <div class="contenido-descripcion">
+                <h3 class="nombre-descripcion">Lucario</h3>
+                <p class="texto-descripcion">Pokémon de tipo Lucha/Acero. Puede sentir el aura de sus oponentes y leer sus pensamientos y emociones. Es conocido por su lealtad y habilidad en combate.</p>
+            </div>
+        </div>
+
+        <div class="bloque-descripcion">
+            <div class="imagen-miniatura">
+                <img src="img/squirtle.jpg" alt="Squirtle">
+            </div>
+            <div class="contenido-descripcion">
+                <h3 class="nombre-descripcion">Squirtle</h3>
+                <p class="texto-descripcion">Pokémon de tipo Agua. Lleva un caparazón duro en su espalda que lo protege y lo hace retroceder al atacar. Es uno de los Pokémon iniciales de Kanto.</p>
+            </div>
+        </div>
+
+    </div>
+
 </section>
 
 <style>
@@ -49,9 +115,9 @@
     font-family: 'Arial', sans-serif;
 }
 
-/* FONDO MÁS POKÉMON (ELEGANTE) */
+/* FONDO LIMPIO */
 body{
-    background: linear-gradient(180deg, #ef5350 0%, #ffffff 40%, #3b4cca 100%);
+    background: linear-gradient(180deg, #9f3735 0%, #ffffff 40%, #822727 100%);
     min-height:100vh;
 }
 
@@ -63,7 +129,7 @@ body{
     padding:50px 0;
 }
 
-/* TÍTULO TIPO POKÉDEX */
+/* TÍTULO */
 .titulo{
     text-align:center;
     font-size:55px;
@@ -75,7 +141,7 @@ body{
     letter-spacing:2px;
 }
 
-/* SUBTITULO LIMPIO */
+/* SUBTITULO */
 .subtitulo{
     text-align:center;
     color:#333;
@@ -83,14 +149,15 @@ body{
     font-size:18px;
 }
 
-/* GRID */
+/* GRID DE FOTOS */
 .galeria{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:25px;
+    margin-bottom:50px;
 }
 
-/* CARD ELEGANTE */
+/* CARD DE FOTO */
 .card{
     position:relative;
     border-radius:18px;
@@ -101,13 +168,11 @@ body{
     border:2px solid rgba(0,0,0,0.05);
 }
 
-/* HOVER SUAVE PRO */
 .card:hover{
     transform:translateY(-8px);
     box-shadow:0 12px 30px rgba(0,0,0,0.25);
 }
 
-/* IMAGEN LIMPIA */
 .card img{
     width:100%;
     height:240px;
@@ -115,7 +180,6 @@ body{
     display:block;
 }
 
-/* BARRA INFERIOR ESTILO POKÉDEX */
 .overlay{
     position:absolute;
     bottom:0;
@@ -129,25 +193,107 @@ body{
     border-top:2px solid #ffcb05;
 }
 
-/* TABLET (2 COLUMNAS) */
+/* ===== BLOQUES DE DESCRIPCIÓN ===== */
+.descripciones-container{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-top:20px;
+}
+
+.bloque-descripcion{
+    display:flex;
+    align-items:center;
+    background:white;
+    border-radius:12px;
+    padding:15px 20px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    border-left:5px solid #ffcb05;
+    transition:0.3s ease;
+    gap:20px;
+}
+
+.bloque-descripcion:hover{
+    transform:translateX(5px);
+    box-shadow:0 6px 20px rgba(0,0,0,0.12);
+}
+
+.imagen-miniatura{
+    width:60px;
+    height:60px;
+    border-radius:12px;
+    overflow:hidden;
+    flex-shrink:0;
+    border:2px solid #eee;
+    transition:0.3s ease;
+}
+
+.bloque-descripcion:hover .imagen-miniatura{
+    border-color:#ffcb05;
+    transform:scale(1.05);
+}
+
+.imagen-miniatura img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.contenido-descripcion{
+    flex:1;
+}
+
+.nombre-descripcion{
+    font-size:18px;
+    font-weight:700;
+    color:#2a75bb;
+    margin-bottom:5px;
+}
+
+.texto-descripcion{
+    color:#555;
+    font-size:14px;
+    line-height:1.6;
+}
+
+/* TABLET */
 @media screen and (max-width:1024px){
     .galeria{
         grid-template-columns:repeat(2,1fr);
     }
-
+    
     .titulo{
         font-size:40px;
     }
 }
 
-/* CELULAR (1 COLUMNA) */
+/* CELULAR */
 @media screen and (max-width:600px){
     .galeria{
         grid-template-columns:1fr;
     }
-
+    
     .titulo{
         font-size:30px;
+    }
+    
+    .bloque-descripcion{
+        flex-direction:row;
+        padding:12px 15px;
+        gap:12px;
+    }
+    
+    .imagen-miniatura{
+        width:50px;
+        height:50px;
+    }
+    
+    .nombre-descripcion{
+        font-size:16px;
+    }
+    
+    .texto-descripcion{
+        font-size:13px;
     }
 }
 
