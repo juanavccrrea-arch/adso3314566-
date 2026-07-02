@@ -7,34 +7,413 @@
     <title>28-challenge-shadow</title>
     <link rel="stylesheet" href="../src/css/03-Css.css">
     <style>
-        /* Estilos adicionales para el pixel art */
         .pixel-art-container {
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
+            min-height: 80vh;
         }
 
-        .pixel-grid {
-            display: grid;
-            grid-template-columns: repeat(25, 20px);
-            grid-template-rows: repeat(25, 20px);
-            gap: 1px;
+        .pixel-art-wrapper {
             background-color: #1a1a1a;
-            border: 3px solid #fff;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            width: 540px;
+            height: 540px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            border: 3px solid #ffffff;
+            overflow: hidden;
+            box-sizing: border-box;
         }
 
-        .pixel {
+        .pixel-art {
             width: 20px;
             height: 20px;
-        }
+            flex: 0 0 auto;
+            background: #FFFFFF;
+            box-shadow:
+                /* FILA 1 */
+                20px 0 0 #FFFFFF, 40px 0 0 #FFFFFF, 60px 0 0 #FFFFFF,
+                80px 0 0 #FFFFFF, 100px 0 0 #FFFFFF, 120px 0 0 #FFFFFF,
+                140px 0 0 #FFFFFF, 160px 0 0 #FFFFFF,
+                180px 0 0 #000000, 200px 0 0 #000000, 220px 0 0 #000000,
+                240px 0 0 #000000, 260px 0 0 #000000,
+                280px 0 0 #FFFFFF, 300px 0 0 #FFFFFF, 320px 0 0 #FFFFFF,
+                340px 0 0 #FFFFFF, 360px 0 0 #FFFFFF, 380px 0 0 #FFFFFF,
+                400px 0 0 #FFFFFF, 420px 0 0 #FFFFFF, 440px 0 0 #FFFFFF,
+                460px 0 0 #FFFFFF, 480px 0 0 #FFFFFF,
 
-        /* Colores para los píxeles */
-        .black { background-color: #000000; }
-        .yellow { background-color: #FFD700; }
-        .dark-yellow { background-color: #DAA520; }
-        .white { background-color: #FFFFFF; }
+                /* FILA 2 */
+                0px 20px 0 #FFFFFF, 20px 20px 0 #FFFFFF, 40px 20px 0 #FFFFFF,
+                60px 20px 0 #FFFFFF, 80px 20px 0 #FFFFFF, 100px 20px 0 #FFFFFF,
+                120px 20px 0 #FFFFFF, 140px 20px 0 #000000,
+                160px 20px 0 #FFFFFF, 180px 20px 0 #FFFFFF, 200px 20px 0 #FFFFFF,
+                220px 20px 0 #FFFFFF, 240px 20px 0 #FFFFFF,
+                260px 20px 0 #000000,
+                280px 20px 0 #FFFFFF, 300px 20px 0 #FFFFFF, 320px 20px 0 #FFFFFF,
+                340px 20px 0 #FFFFFF, 360px 20px 0 #FFFFFF, 380px 20px 0 #FFFFFF,
+                400px 20px 0 #FFFFFF, 420px 20px 0 #FFFFFF, 440px 20px 0 #FFFFFF,
+                460px 20px 0 #FFFFFF, 480px 20px 0 #FFFFFF,
+
+                /* FILA 3 */
+                0px 40px 0 #FFFFFF, 20px 40px 0 #FFFFFF, 40px 40px 0 #FFFFFF,
+                60px 40px 0 #FFFFFF, 80px 40px 0 #FFFFFF, 100px 40px 0 #FFFFFF,
+                120px 40px 0 #000000,
+                140px 40px 0 #FFFFFF, 160px 40px 0 #FFFFFF, 180px 40px 0 #FFFFFF,
+                200px 40px 0 #FFFFFF, 220px 40px 0 #FFFFFF, 240px 40px 0 #FFFFFF,
+                260px 40px 0 #FFFFFF,
+                280px 40px 0 #000000,
+                300px 40px 0 #FFFFFF, 320px 40px 0 #FFFFFF, 340px 40px 0 #FFFFFF,
+                360px 40px 0 #FFFFFF, 380px 40px 0 #FFFFFF, 400px 40px 0 #FFFFFF,
+                420px 40px 0 #FFFFFF, 440px 40px 0 #FFFFFF, 460px 40px 0 #FFFFFF,
+                480px 40px 0 #FFFFFF,
+
+                /* FILA 4 */
+                0px 60px 0 #FFFFFF, 20px 60px 0 #FFFFFF, 40px 60px 0 #FFFFFF,
+                60px 60px 0 #FFFFFF, 80px 60px 0 #FFFFFF,
+                100px 60px 0 #000000,
+                120px 60px 0 #FFFFFF, 140px 60px 0 #FFFFFF, 160px 60px 0 #FFFFFF,
+                180px 60px 0 #FFFFFF, 200px 60px 0 #FFFFFF, 220px 60px 0 #FFFFFF,
+                240px 60px 0 #FFFFFF, 260px 60px 0 #FFFFFF,
+                280px 60px 0 #FFFFFF,
+                300px 60px 0 #000000, 320px 60px 0 #000000, 340px 60px 0 #000000,
+                360px 60px 0 #FFFFFF, 380px 60px 0 #FFFFFF, 400px 60px 0 #FFFFFF,
+                420px 60px 0 #FFFFFF, 440px 60px 0 #FFFFFF, 460px 60px 0 #FFFFFF,
+                480px 60px 0 #FFFFFF,
+
+                /* FILA 5 */
+                0px 80px 0 #FFFFFF, 20px 80px 0 #FFFFFF, 40px 80px 0 #FFFFFF,
+                60px 80px 0 #FFFFFF, 80px 80px 0 #FFFFFF,
+                100px 80px 0 #000000, 120px 80px 0 #000000,
+                140px 80px 0 #FFFFFF,
+                160px 80px 0 #000000,
+                180px 80px 0 #FFFFFF, 200px 80px 0 #FFFFFF, 220px 80px 0 #FFFFFF,
+                240px 80px 0 #FFFFFF,
+                260px 80px 0 #000000,
+                280px 80px 0 #FFFFFF, 300px 80px 0 #FFFFFF, 320px 80px 0 #FFFFFF,
+                340px 80px 0 #FFFFFF,
+                360px 80px 0 #000000,
+                380px 80px 0 #FFFFFF, 400px 80px 0 #FFFFFF, 420px 80px 0 #FFFFFF,
+                440px 80px 0 #FFFFFF, 460px 80px 0 #FFFFFF, 480px 80px 0 #FFFFFF,
+
+                /* FILA 6 */
+                0px 100px 0 #FFFFFF, 20px 100px 0 #FFFFFF, 40px 100px 0 #FFFFFF,
+                60px 100px 0 #FFFFFF,
+                80px 100px 0 #000000,
+                100px 100px 0 #FFFFFF,
+                120px 100px 0 #000000, 140px 100px 0 #000000,
+                160px 100px 0 #FFFFFF,
+                180px 100px 0 #000000,
+                200px 100px 0 #FFFFFF, 220px 100px 0 #FFFFFF, 240px 100px 0 #FFFFFF,
+                260px 100px 0 #000000,
+                280px 100px 0 #FFFFFF, 300px 100px 0 #FFFFFF, 320px 100px 0 #FFFFFF,
+                340px 100px 0 #FFFFFF,
+                360px 100px 0 #FFFFFF,
+                380px 100px 0 #000000, 400px 100px 0 #000000,
+                420px 100px 0 #FFFFFF, 440px 100px 0 #FFFFFF, 460px 100px 0 #FFFFFF,
+                480px 100px 0 #FFFFFF,
+
+                /* FILA 7 */
+                0px 120px 0 #FFFFFF, 20px 120px 0 #FFFFFF, 40px 120px 0 #FFFFFF,
+                60px 120px 0 #FFFFFF,
+                80px 120px 0 #000000, 100px 120px 0 #000000,
+                120px 120px 0 #000000, 140px 120px 0 #000000,
+                160px 120px 0 #FFFFFF,
+                180px 120px 0 #000000,
+                200px 120px 0 #FFFFFF, 220px 120px 0 #FFFFFF, 240px 120px 0 #FFFFFF,
+                260px 120px 0 #FFFFFF, 280px 120px 0 #FFFFFF,
+                300px 120px 0 #FFFFFF, 320px 120px 0 #FFFFFF, 340px 120px 0 #FFFFFF,
+                360px 120px 0 #FFFFFF,
+                380px 120px 0 #000000, 400px 120px 0 #000000,
+                420px 120px 0 #FFFFFF, 440px 120px 0 #FFFFFF, 460px 120px 0 #FFFFFF,
+                480px 120px 0 #FFFFFF,
+
+                /* FILA 8 */
+                0px 140px 0 #FFFFFF, 20px 140px 0 #FFFFFF, 40px 140px 0 #FFFFFF,
+                60px 140px 0 #FFFFFF,
+                80px 140px 0 #000000, 100px 140px 0 #000000,
+                120px 140px 0 #000000, 140px 140px 0 #000000,
+                160px 140px 0 #FFFFFF,
+                180px 140px 0 #000000,
+                200px 140px 0 #FFFFFF, 220px 140px 0 #FFFFFF, 240px 140px 0 #FFFFFF,
+                260px 140px 0 #FFFFFF, 280px 140px 0 #FFFFFF,
+                300px 140px 0 #FFFFFF, 320px 140px 0 #FFFFFF, 340px 140px 0 #FFFFFF,
+                360px 140px 0 #FFFFFF,
+                380px 140px 0 #000000,
+                400px 140px 0 #FFFFFF, 420px 140px 0 #FFFFFF, 440px 140px 0 #FFFFFF,
+                460px 140px 0 #FFFFFF, 480px 140px 0 #FFFFFF,
+
+                /* FILA 9 */
+                0px 160px 0 #FFFFFF, 20px 160px 0 #FFFFFF, 40px 160px 0 #FFFFFF,
+                60px 160px 0 #FFFFFF,
+                80px 160px 0 #000000, 100px 160px 0 #000000,
+                120px 160px 0 #000000, 140px 160px 0 #000000,
+                160px 160px 0 #FFFFFF,
+                180px 160px 0 #000000,
+                200px 160px 0 #FFFFFF, 220px 160px 0 #FFFFFF, 240px 160px 0 #FFFFFF,
+                260px 160px 0 #FFFFFF, 280px 160px 0 #FFFFFF,
+                300px 160px 0 #FFFFFF, 320px 160px 0 #FFFFFF, 340px 160px 0 #FFFFFF,
+                360px 160px 0 #000000,
+                380px 160px 0 #FFFFFF, 400px 160px 0 #FFFFFF,
+                420px 160px 0 #FFFFFF, 440px 160px 0 #FFFFFF, 460px 160px 0 #FFFFFF,
+                480px 160px 0 #FFFFFF,
+
+                /* FILA 10 */
+                0px 180px 0 #FFFFFF, 20px 180px 0 #FFFFFF, 40px 180px 0 #FFFFFF,
+                60px 180px 0 #FFFFFF,
+                80px 180px 0 #000000, 100px 180px 0 #000000,
+                120px 180px 0 #000000, 140px 180px 0 #000000,
+                160px 180px 0 #FFFFFF,
+                180px 180px 0 #000000,
+                200px 180px 0 #FFFFFF, 220px 180px 0 #FFFFFF, 240px 180px 0 #FFFFFF,
+                260px 180px 0 #FFFFFF, 280px 180px 0 #FFFFFF,
+                300px 180px 0 #FFFFFF,
+                320px 180px 0 #000000, 340px 180px 0 #000000,
+                360px 180px 0 #FFFFFF, 380px 180px 0 #FFFFFF,
+                400px 180px 0 #FFFFFF, 420px 180px 0 #FFFFFF, 440px 180px 0 #FFFFFF,
+                460px 180px 0 #FFFFFF, 480px 180px 0 #FFFFFF,
+
+                /* FILA 11 */
+                0px 200px 0 #FFFFFF, 20px 200px 0 #FFFFFF, 40px 200px 0 #FFFFFF,
+                60px 200px 0 #FFFFFF, 80px 200px 0 #FFFFFF,
+                100px 200px 0 #000000, 120px 200px 0 #000000,
+                140px 200px 0 #FFFFFF,
+                160px 200px 0 #000000,
+                180px 200px 0 #FFFFFF,
+                200px 200px 0 #000000,
+                220px 200px 0 #FFFFFF, 240px 200px 0 #FFFFFF,
+                260px 200px 0 #000000, 280px 200px 0 #000000,
+                300px 200px 0 #000000,
+                320px 200px 0 #FFFFFF, 340px 200px 0 #FFFFFF,
+                360px 200px 0 #FFFFFF, 380px 200px 0 #FFFFFF,
+                400px 200px 0 #FFFFFF, 420px 200px 0 #FFFFFF, 440px 200px 0 #FFFFFF,
+                460px 200px 0 #FFFFFF, 480px 200px 0 #FFFFFF,
+
+                /* FILA 12 */
+                0px 220px 0 #FFFFFF, 20px 220px 0 #FFFFFF, 40px 220px 0 #FFFFFF,
+                60px 220px 0 #FFFFFF, 80px 220px 0 #FFFFFF,
+                100px 220px 0 #FFFFFF,
+                120px 220px 0 #000000, 140px 220px 0 #000000,
+                160px 220px 0 #FFFFFF, 180px 220px 0 #FFFFFF,
+                200px 220px 0 #FFFFFF,
+                220px 220px 0 #000000, 240px 220px 0 #000000,
+                260px 220px 0 #000000, 280px 220px 0 #FFFFFF,
+                300px 220px 0 #FFFFFF, 320px 220px 0 #FFFFFF,
+                340px 220px 0 #FFFFFF, 360px 220px 0 #FFFFFF,
+                380px 220px 0 #FFFFFF, 400px 220px 0 #FFFFFF,
+                420px 220px 0 #FFFFFF, 440px 220px 0 #FFFFFF,
+                460px 220px 0 #FFFFFF, 480px 220px 0 #FFFFFF,
+
+                /* FILA 13 */
+                0px 240px 0 #FFFFFF, 20px 240px 0 #FFFFFF, 40px 240px 0 #FFFFFF,
+                60px 240px 0 #FFFFFF, 80px 240px 0 #FFFFFF,
+                100px 240px 0 #FFFFFF, 120px 240px 0 #FFFFFF,
+                140px 240px 0 #FFFFFF, 160px 240px 0 #FFFFFF,
+                180px 240px 0 #FFFFFF, 200px 240px 0 #FFFFFF,
+                220px 240px 0 #000000,
+                240px 240px 0 #FFFFFF, 260px 240px 0 #FFFFFF,
+                280px 240px 0 #FFFFFF,
+                300px 240px 0 #000000,
+                320px 240px 0 #FFFFFF, 340px 240px 0 #FFFFFF,
+                360px 240px 0 #FFFFFF, 380px 240px 0 #FFFFFF,
+                400px 240px 0 #FFFFFF, 420px 240px 0 #FFFFFF,
+                440px 240px 0 #FFFFFF, 460px 240px 0 #FFFFFF,
+                480px 240px 0 #FFFFFF,
+
+                /* FILA 14 */
+                0px 260px 0 #FFFFFF, 20px 260px 0 #FFFFFF, 40px 260px 0 #FFFFFF,
+                60px 260px 0 #FFFFFF, 80px 260px 0 #FFFFFF,
+                100px 260px 0 #FFFFFF, 120px 260px 0 #FFFFFF,
+                140px 260px 0 #FFFFFF, 160px 260px 0 #FFFFFF,
+                180px 260px 0 #FFFFFF, 200px 260px 0 #FFFFFF,
+                220px 260px 0 #000000,
+                240px 260px 0 #FFFFFF,
+                260px 260px 0 #000000,
+                280px 260px 0 #FFFFFF, 300px 260px 0 #FFFFFF,
+                320px 260px 0 #000000,
+                340px 260px 0 #FFFFFF, 360px 260px 0 #FFFFFF,
+                380px 260px 0 #FFFFFF, 400px 260px 0 #FFFFFF,
+                420px 260px 0 #FFFFFF, 440px 260px 0 #FFFFFF,
+                460px 260px 0 #FFFFFF, 480px 260px 0 #FFFFFF,
+
+                /* FILA 15 */
+                0px 280px 0 #FFFFFF, 20px 280px 0 #FFFFFF, 40px 280px 0 #FFFFFF,
+                60px 280px 0 #FFFFFF, 80px 280px 0 #FFFFFF,
+                100px 280px 0 #FFFFFF, 120px 280px 0 #FFFFFF,
+                140px 280px 0 #FFFFFF, 160px 280px 0 #FFFFFF,
+                180px 280px 0 #FFFFFF, 200px 280px 0 #FFFFFF,
+                220px 280px 0 #000000,
+                240px 280px 0 #FFFFFF,
+                260px 280px 0 #000000,
+                280px 280px 0 #FFFFFF, 300px 280px 0 #FFFFFF,
+                320px 280px 0 #000000,
+                340px 280px 0 #FFFFFF, 360px 280px 0 #FFFFFF,
+                380px 280px 0 #FFFFFF, 400px 280px 0 #FFFFFF,
+                420px 280px 0 #FFFFFF, 440px 280px 0 #FFFFFF,
+                460px 280px 0 #FFFFFF, 480px 280px 0 #FFFFFF,
+
+                /* FILA 16 */
+                0px 300px 0 #FFFFFF, 20px 300px 0 #FFFFFF, 40px 300px 0 #FFFFFF,
+                60px 300px 0 #FFFFFF, 80px 300px 0 #FFFFFF,
+                100px 300px 0 #FFFFFF, 120px 300px 0 #FFFFFF,
+                140px 300px 0 #FFFFFF, 160px 300px 0 #FFFFFF,
+                180px 300px 0 #FFFFFF,
+                200px 300px 0 #000000,
+                220px 300px 0 #FFFFFF, 240px 300px 0 #FFFFFF,
+                260px 300px 0 #000000,
+                280px 300px 0 #FFFFFF, 300px 300px 0 #FFFFFF,
+                320px 300px 0 #FFFFFF,
+                340px 300px 0 #000000,
+                360px 300px 0 #FFFFFF, 380px 300px 0 #FFFFFF,
+                400px 300px 0 #FFFFFF, 420px 300px 0 #FFFFFF,
+                440px 300px 0 #FFFFFF, 460px 300px 0 #FFFFFF,
+                480px 300px 0 #FFFFFF,
+
+                /* FILA 17 */
+                0px 320px 0 #FFFFFF, 20px 320px 0 #FFFFFF, 40px 320px 0 #FFFFFF,
+                60px 320px 0 #FFFFFF, 80px 320px 0 #FFFFFF,
+                100px 320px 0 #FFFFFF, 120px 320px 0 #FFFFFF,
+                140px 320px 0 #FFFFFF, 160px 320px 0 #FFFFFF,
+                180px 320px 0 #FFFFFF,
+                200px 320px 0 #000000,
+                220px 320px 0 #FFFFFF, 240px 320px 0 #FFFFFF,
+                260px 320px 0 #000000,
+                280px 320px 0 #FFFFFF, 300px 320px 0 #FFFFFF,
+                320px 320px 0 #FFFFFF,
+                340px 320px 0 #000000,
+                360px 320px 0 #FFFFFF, 380px 320px 0 #FFFFFF,
+                400px 320px 0 #FFFFFF, 420px 320px 0 #FFFFFF,
+                440px 320px 0 #FFFFFF, 460px 320px 0 #FFFFFF,
+                480px 320px 0 #FFFFFF,
+
+                /* FILA 18 */
+                0px 340px 0 #FFFFFF, 20px 340px 0 #FFFFFF, 40px 340px 0 #FFFFFF,
+                60px 340px 0 #FFFFFF, 80px 340px 0 #FFFFFF,
+                100px 340px 0 #FFFFFF, 120px 340px 0 #FFFFFF,
+                140px 340px 0 #FFFFFF, 160px 340px 0 #FFFFFF,
+                180px 340px 0 #FFFFFF, 200px 340px 0 #FFFFFF,
+                220px 340px 0 #000000, 240px 340px 0 #000000,
+                260px 340px 0 #FFFFFF, 280px 340px 0 #FFFFFF,
+                300px 340px 0 #FFFFFF, 320px 340px 0 #FFFFFF,
+                340px 340px 0 #000000,
+                360px 340px 0 #FFFFFF, 380px 340px 0 #FFFFFF,
+                400px 340px 0 #FFFFFF, 420px 340px 0 #FFFFFF,
+                440px 340px 0 #FFFFFF, 460px 340px 0 #FFFFFF,
+                480px 340px 0 #FFFFFF,
+
+                /* FILA 19 */
+                0px 360px 0 #FFFFFF, 20px 360px 0 #FFFFFF, 40px 360px 0 #FFFFFF,
+                60px 360px 0 #FFFFFF, 80px 360px 0 #FFFFFF,
+                100px 360px 0 #FFFFFF, 120px 360px 0 #FFFFFF,
+                140px 360px 0 #FFFFFF, 160px 360px 0 #FFFFFF,
+                180px 360px 0 #FFFFFF,
+                200px 360px 0 #000000, 220px 360px 0 #000000,
+                240px 360px 0 #FFFFFF, 260px 360px 0 #FFFFFF,
+                280px 360px 0 #FFFFFF, 300px 360px 0 #FFFFFF,
+                320px 360px 0 #000000,
+                340px 360px 0 #FFFFFF, 360px 360px 0 #FFFFFF,
+                380px 360px 0 #FFFFFF, 400px 360px 0 #FFFFFF,
+                420px 360px 0 #FFFFFF, 440px 360px 0 #FFFFFF,
+                460px 360px 0 #FFFFFF, 480px 360px 0 #FFFFFF,
+
+                /* FILA 20 */
+                0px 380px 0 #FFFFFF, 20px 380px 0 #FFFFFF, 40px 380px 0 #FFFFFF,
+                60px 380px 0 #FFFFFF, 80px 380px 0 #FFFFFF,
+                100px 380px 0 #FFFFFF, 120px 380px 0 #FFFFFF,
+                140px 380px 0 #FFFFFF, 160px 380px 0 #FFFFFF,
+                180px 380px 0 #000000,
+                200px 380px 0 #FFFFFF, 220px 380px 0 #FFFFFF,
+                240px 380px 0 #FFFFFF, 260px 380px 0 #FFFFFF,
+                280px 380px 0 #FFFFFF,
+                300px 380px 0 #000000,
+                320px 380px 0 #FFFFFF, 340px 380px 0 #FFFFFF,
+                360px 380px 0 #FFFFFF, 380px 380px 0 #FFFFFF,
+                400px 380px 0 #FFFFFF, 420px 380px 0 #FFFFFF,
+                440px 380px 0 #FFFFFF, 460px 380px 0 #FFFFFF,
+                480px 380px 0 #FFFFFF,
+
+                /* FILA 21 */
+                0px 400px 0 #FFFFFF, 20px 400px 0 #FFFFFF, 40px 400px 0 #FFFFFF,
+                60px 400px 0 #FFFFFF, 80px 400px 0 #FFFFFF,
+                100px 400px 0 #FFFFFF, 120px 400px 0 #FFFFFF,
+                140px 400px 0 #FFFFFF, 160px 400px 0 #FFFFFF,
+                180px 400px 0 #FFFFFF,
+                200px 400px 0 #000000, 220px 400px 0 #000000,
+                240px 400px 0 #000000,
+                260px 400px 0 #FFFFFF,
+                280px 400px 0 #000000,
+                300px 400px 0 #FFFFFF, 320px 400px 0 #FFFFFF,
+                340px 400px 0 #FFFFFF, 360px 400px 0 #FFFFFF,
+                380px 400px 0 #FFFFFF, 400px 400px 0 #FFFFFF,
+                420px 400px 0 #FFFFFF, 440px 400px 0 #FFFFFF,
+                460px 400px 0 #FFFFFF, 480px 400px 0 #FFFFFF,
+
+                /* FILA 22 */
+                0px 420px 0 #FFFFFF, 20px 420px 0 #FFFFFF, 40px 420px 0 #FFFFFF,
+                60px 420px 0 #FFFFFF, 80px 420px 0 #FFFFFF,
+                100px 420px 0 #FFFFFF, 120px 420px 0 #FFFFFF,
+                140px 420px 0 #FFFFFF, 160px 420px 0 #FFFFFF,
+                180px 420px 0 #FFFFFF, 200px 420px 0 #FFFFFF,
+                220px 420px 0 #000000,
+                240px 420px 0 #FFFFFF, 260px 420px 0 #FFFFFF,
+                280px 420px 0 #FFFFFF,
+                300px 420px 0 #000000, 320px 420px 0 #000000,
+                340px 420px 0 #FFFFFF, 360px 420px 0 #FFFFFF,
+                380px 420px 0 #FFFFFF, 400px 420px 0 #FFFFFF,
+                420px 420px 0 #FFFFFF, 440px 420px 0 #FFFFFF,
+                460px 420px 0 #FFFFFF, 480px 420px 0 #FFFFFF,
+
+                /* FILA 23 */
+                0px 440px 0 #FFFFFF, 20px 440px 0 #FFFFFF, 40px 440px 0 #FFFFFF,
+                60px 440px 0 #FFFFFF, 80px 440px 0 #FFFFFF,
+                100px 440px 0 #FFFFFF, 120px 440px 0 #FFFFFF,
+                140px 440px 0 #FFFFFF, 160px 440px 0 #FFFFFF,
+                180px 440px 0 #FFFFFF,
+                200px 440px 0 #000000,
+                220px 440px 0 #FFFFFF, 240px 440px 0 #FFFFFF,
+                260px 440px 0 #FFFFFF, 280px 440px 0 #FFFFFF,
+                300px 440px 0 #FFFFFF, 320px 440px 0 #FFFFFF,
+                340px 440px 0 #000000,
+                360px 440px 0 #FFFFFF, 380px 440px 0 #FFFFFF,
+                400px 440px 0 #FFFFFF, 420px 440px 0 #FFFFFF,
+                440px 440px 0 #FFFFFF, 460px 440px 0 #FFFFFF,
+                480px 440px 0 #FFFFFF,
+
+                /* FILA 24 */
+                0px 460px 0 #FFFFFF, 20px 460px 0 #FFFFFF, 40px 460px 0 #FFFFFF,
+                60px 460px 0 #FFFFFF, 80px 460px 0 #FFFFFF,
+                100px 460px 0 #FFFFFF, 120px 460px 0 #FFFFFF,
+                140px 460px 0 #FFFFFF, 160px 460px 0 #FFFFFF,
+                180px 460px 0 #FFFFFF,
+                200px 460px 0 #000000, 220px 460px 0 #000000,
+                240px 460px 0 #000000, 260px 460px 0 #000000,
+                280px 460px 0 #000000, 300px 460px 0 #000000,
+                320px 460px 0 #000000,
+                340px 460px 0 #FFFFFF, 360px 460px 0 #FFFFFF,
+                380px 460px 0 #FFFFFF, 400px 460px 0 #FFFFFF,
+                420px 460px 0 #FFFFFF, 440px 460px 0 #FFFFFF,
+                460px 460px 0 #FFFFFF, 480px 460px 0 #FFFFFF,
+
+                /* FILA 25 */
+                0px 480px 0 #FFFFFF, 20px 480px 0 #FFFFFF, 40px 480px 0 #FFFFFF,
+                60px 480px 0 #FFFFFF, 80px 480px 0 #FFFFFF,
+                100px 480px 0 #FFFFFF, 120px 480px 0 #FFFFFF,
+                140px 480px 0 #FFFFFF, 160px 480px 0 #FFFFFF,
+                180px 480px 0 #FFFFFF, 200px 480px 0 #FFFFFF,
+                220px 480px 0 #FFFFFF, 240px 480px 0 #FFFFFF,
+                260px 480px 0 #FFFFFF, 280px 480px 0 #FFFFFF,
+                300px 480px 0 #FFFFFF, 320px 480px 0 #FFFFFF,
+                340px 480px 0 #FFFFFF, 360px 480px 0 #FFFFFF,
+                380px 480px 0 #FFFFFF, 400px 480px 0 #FFFFFF,
+                420px 480px 0 #FFFFFF, 440px 480px 0 #FFFFFF,
+                460px 480px 0 #FFFFFF, 480px 480px 0 #FFFFFF;
+
+            image-rendering: pixelated;
+        }
     </style>
 </head>
 
@@ -49,685 +428,12 @@
     <main>
         <header>
             <h1>28-challenge-shadow</h1>
-            <h2>Pixel Art 0.</h2>
+            <h2>Pixel Art con Box-Shadow</h2>
         </header>
         <section>
             <div class="pixel-art-container">
-                <div class="pixel-grid">
-                    <!-- FILA 1 -->
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-
-                    <!-- FILA 2 -->
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-
-                    <!-- FILA 3 -->
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-
-                    <!-- FILA 4 -->
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-
-                    <!-- FILA 5 -->
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-
-                    <!-- FILA 6 -->
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-
-                    <!-- FILA 7 -->
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-
-                    <!-- FILA 8 -->
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-
-                    <!-- FILA 9 -->
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-
-                    <!-- FILA 10 -->
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-
-                    <!-- FILA 11 -->
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-
-                    <!-- FILA 12 -->
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-
-                    <!-- FILA 13 -->
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-
-                    <!-- FILA 14 -->
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-
-                    <!-- FILA 15 -->
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-
-                    <!-- FILA 16 -->
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-
-                    <!-- FILA 17 -->
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-
-                    <!-- FILA 18 -->
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-
-                    <!-- FILA 19 -->
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-
-                    <!-- FILA 20 -->
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-
-                    <!-- FILA 21 -->
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-
-                    <!-- FILA 22 -->
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-
-                    <!-- FILA 23 -->
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-
-                    <!-- FILA 24 -->
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel black"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-
-                    <!-- FILA 25 -->
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
-                    <div class="pixel white"></div>
+                <div class="pixel-art-wrapper">
+                    <div class="pixel-art"></div>
                 </div>
             </div>
         </section>
